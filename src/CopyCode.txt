@@ -1,0 +1,26 @@
+/*Background color to the main navigation*/
+.mainNav {
+    background-color: red;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.mainNav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*Color of links on hover */
+.mainNav a:hover {
+    background-color: red;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.mainNav a.active {
+    background-color: red;
+    color: white;
