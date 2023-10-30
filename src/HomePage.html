@@ -4,6 +4,7 @@
 <head>
     <title>Hakuna Matata Bank</title>
     <link rel="stylesheet" href="style_HomePage.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
     <!--Nav Bar-->
     <div class="navBar">
-        <div class="navHomePage">
+        <div class="navHomePage shadow-hd">
             <ul>
                 <li class="listNavHome">
                     <a href="#home">Home</a>
@@ -48,26 +49,40 @@
         </div>
         <div class="lastLogin">
             <p id="loginDateTime"></p>
+            <p><span data-bind="value: lastLoginDateTime"></span></p>
             <script>
                 const currentDateTime = new Date();
-                document.getElementById("loginDateTime").innerHTML = 'Your last login: ' + currentDateTime.toLocaleString();
+                if ((document.getElementById("loginDateTime").textContent.length) < 15) {
+                    document.getElementById("loginDateTime").innerHTML = 'Your last login: ' + currentDateTime.toLocaleString();
+                }
+            </script>
+
+            <script>
+                function UpdateLoginTime() {
+                    this.lastLoginDateTime = ko.observable();
+                    this.lastLoginDateTime("New last login: ");
+                }
+                ko.applyBindings(new UpdateLoginTime());
+
             </script>
         </div>
     </div>
 
     <!--Asset and Transaction Header-->
     <div class="rowAssetTransHeader">
-        <!--Asset-->
-        <div class="colAssetHeader">
-            <p>Assets (CAD)</p>
-        </div>
+        <div>
+            <!--Asset-->
+            <div class="colAssetHeader">
+                <p>Assets (CAD)</p>
+            </div>
 
-        <div class="colEmptyHeader">
-            <p></p>
-        </div>
+            <div class="colEmptyHeader">
+                <p></p>
+            </div>
 
-        <div class="colTransHeader">
-            <p>Last 5 Transactions (CAD)</p>
+            <div class="colTransHeader">
+                <p>Last 5 Transactions (CAD)</p>
+            </div>
         </div>
     </div>
 
@@ -156,3 +171,55 @@
         </div>
 
     -->
+
+
+
+
+
+<div role="row" row-index="0" row-id="0" tabindex="-1" aria-rowindex="2">
+    <div tabindex="-1" role="gridcell" aria-colindex="1"
+        style="left: 0px; width: 270px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        Sick Days - Canada</div>
+    <div tabindex="-1" role="gridcell" aria-colindex="2"
+        style="left: 270px; width: 269.875px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        <div><a id="essBalanceTileBalancesHyperLink_0" pendo-id="pto_ess_balance_tile_balanceLink"
+                data-id="pto_ess_balance_tile_balanceLink" buttonstyle="link" class="paddingLeftRightNone lowercase"
+                aria-label="button 36.00 hours" role="button" title="pto_ess_balance_tile_balanceLink">36.00 hours</a>
+        </div>
+    </div>
+</div>
+
+<div role="row" row-index="1" row-id="1" tabindex="-1"
+    class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-not-inline-editing"
+    aria-rowindex="3"
+    style="transform: translateY(54px); background: var(--neutral-lightest); border-bottom: 5px solid white; height: 54px; --ag-line-height: 40px;">
+    <div tabindex="-1" role="gridcell" col-id="pto_ess_balance_tile_policy"
+        class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="1"
+        style="left: 0px; width: 270px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        Vacation - Canada</div>
+    <div tabindex="-1" role="gridcell" col-id="pto_ess_balance_tile_balanceLink"
+        class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value ellipsis" aria-colindex="2"
+        style="left: 270px; width: 269.875px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        <div><a id="essBalanceTileBalancesHyperLink_1" pendo-id="pto_ess_balance_tile_balanceLink"
+                data-id="pto_ess_balance_tile_balanceLink" buttonstyle="link" class="paddingLeftRightNone lowercase"
+                aria-label="button 71.50 hours" role="button" title="pto_ess_balance_tile_balanceLink">71.50 hours</a>
+        </div>
+    </div>
+</div>
+
+<div role="row" row-index="2" row-id="2" tabindex="-1"
+    class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-last ag-row-not-inline-editing"
+    aria-rowindex="4"
+    style="transform: translateY(108px); background: var(--neutral-lightest); border-bottom: 5px solid white; height: 54px; --ag-line-height: 40px;">
+    <div tabindex="-1" role="gridcell" col-id="pto_ess_balance_tile_policy"
+        class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="1"
+        style="left: 0px; width: 270px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        Bereavement - Canada</div>
+    <div tabindex="-1" role="gridcell" col-id="pto_ess_balance_tile_balanceLink"
+        class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value ellipsis" aria-colindex="2"
+        style="left: 270px; width: 269.875px; line-height: normal; white-space: normal; padding-right: 10px; padding-left: 10px; height: 100%; display: inline-flex; align-items: center;">
+        <div><a id="essBalanceTileBalancesHyperLink_2" pendo-id="pto_ess_balance_tile_balanceLink"
+                data-id="pto_ess_balance_tile_balanceLink" buttonstyle="link" class="paddingLeftRightNone lowercase"
+                aria-label="button -- " role="button" title="pto_ess_balance_tile_balanceLink">-- </a></div>
+    </div>
+</div>

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 div {
@@ -9,11 +10,12 @@ div {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     align-items: center;
+    z-index: 1000;
     width: 100%;
     height: 100px;
-    background-color: yellow;
+    background-color: white;
     color: #f2f2f2;
     line-height: 20px;
     padding: 10px 0px;
@@ -23,7 +25,7 @@ div {
     display: flex;
     position: fixed;
     width: 100%;
-    background-color: lightgreen;
+    background-color: white;
     color: #f2f2f2;
     line-height: 20px;
     padding: 10px 10px;
@@ -59,6 +61,13 @@ div {
 
 .header-right .sub-header .inline-block .signout {
     color: #d81e05;
+}
+
+.navBar {
+    width: 100%;
+    position: fixed;
+    padding-top: 100px;
+    z-index: 1000;
 }
 
 .navBar .navHomePage ul {
@@ -99,7 +108,7 @@ div {
 }
 
 .welcome {
-    padding: 15px;
+    padding: 150px 15px 15px 15px;
 }
 
 .welcome .welcomeMsg {
@@ -172,12 +181,11 @@ div {
     background-image: linear-gradient(rgb(247, 247, 247), rgb(211, 211, 211), rgb(179, 178, 178));
 }
 
-
-
 /*-------------------
 Asset and Transaction
 -------------------*/
 .rowAssetTrans .colMain .colAsset #tab2 {
+    display:inline-block;
     padding-left: 5em;
     text-indent: 2em;
     text-align: left;
@@ -209,8 +217,14 @@ li {
     float: none;
 }
 
+/*----------------------------------------*/
 .float-left {
     float: left;
+}
+
+.shadow-hd {
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;*/
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 img {
@@ -220,24 +234,3 @@ img {
 
 /*----------------------------------------*/
 
-
-
-
-
-.signinDetails {
-    width: 100%;
-    margin-bottom: 3px 1px;
-    text-align: right;
-    height: 16px;
-    float: right;
-    color: #666;
-    padding: 2px 2px 0 0;
-    font-size: .85em;
-}
-
-.mainNav ul li a span {
-    display: block;
-    float: left;
-    height: 28px;
-    padding: 9px 13px 0 8px;
-}
