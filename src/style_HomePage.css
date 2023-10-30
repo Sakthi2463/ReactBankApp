@@ -1,11 +1,234 @@
-.mainNav {
-    background-color: red;
-    overflow: hidden;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+div {
+    display: block;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    color: #f2f2f2;
+    line-height: 20px;
+    padding: 10px 0px;
+}
+
+.header .logo {
+    display: flex;
+    position: fixed;
+    background-color: #fff;
+    color: #f2f2f2;
+    line-height: 20px;
+    padding: 10px 10px;
+}
+
+.logo {
+    height: 80px;
+    margin-right: 75px;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.header .home {
+    display: flex;
+}
+
+.header .header-right {
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.header .header-right li.sub-header {
+    display: inline-block;
+    text-align: center;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+.header .header-right ul li {
+    display: inline;
+    float: left;
+}
+
+.header-right .sub-header .inline-block .signout {
+    color: #d81e05;
+}
+
+.navBar .navHomePage ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d61212;
+    border-radius: 12px;
+}
+
+.navBar .navHomePage ul li {
+    float: left;
+}
+
+.navBar .navHomePage ul li a {
+    display: block;
+    padding: 15px 50px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.navBar .navHomePage ul li a:hover {
+    background-color: white;
+    color: #d61212;
+    border-radius: 12px;
+    border: 1px solid #d61212;
+    padding: 14px 49px;
+}
+
+.navBar {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.welcome {
+    padding: 15px;
+}
+
+.welcome .welcomeMsg {
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.welcome .lastLogin {
+    padding: 0 0;
+}
+
+/*Asset and Transaction HEADERS*/
+.rowAssetTransHeader .colAssetHeader,
+.rowAssetTransHeader .colEmptyHeader,
+.rowAssetTransHeader .colTransHeader {
+    padding: 15px 1%;
+    text-align: center;
+    float: left;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 56px;
+    font-size: 18px;
+    background-color: white;
+}
+
+.rowAssetTransHeader .colAssetHeader {
+    margin-left: 2%;
+    width: 47%;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(247, 247, 247), rgb(211, 211, 211), rgb(179, 178, 178));
+}
+
+.rowAssetTransHeader .colEmptyHeader {
+    width: 2%;
+}
+
+.rowAssetTransHeader .colTransHeader {
+    width: 47%;
+    margin-right: 2%;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(247, 247, 247), rgb(211, 211, 211), rgb(179, 178, 178));
+}
+
+/*-------------------
+Asset and Transaction
+-------------------*/
+.rowAssetTrans .colAsset,
+.rowAssetTrans .colEmpty,
+.rowAssetTrans .colTrans {
+    padding: 5px 1%;
+    text-align: left;
+    float: left;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 35px;
+    height: fit-content;
+    font-size: 18px;
+    background-color: white;
+}
+
+.rowAssetTrans .colAsset {
+    margin-left: 2%;
+    width: 47%;
+    border: 1px solid black;
+}
+
+#tab2 {
+    display: inline-block;
+    padding-left: 5em;
+    text-indent: 2em;
+    position: relative;
+    text-align: left;
+    background-color: #d61212;
+}
+
+.rowAssetTrans .colAsset p {
+    border-bottom: 1px dotted gray;
+}
+
+.rowAssetTrans .colEmpty {
+    width: 2%;
+}
+
+.rowAssetTrans .colTrans {
+    width: 47%;
+    margin-right: 2%;
+    border: 1px solid black;
+}
+
+ul,
+li {
+    border: 0 none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right ul li a {
+    color: #00223d;
+    display: block;
+    padding: 50px 5px 0 5px;
+    text-decoration: none;
+    float: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+/*----------------------------------------*/
+
+
+
+
 
 .signinDetails {
     width: 100%;
-    margin-bottom: 3px px;
+    margin-bottom: 3px 1px;
     text-align: right;
     height: 16px;
     float: right;
@@ -20,4 +243,3 @@
     height: 28px;
     padding: 9px 13px 0 8px;
 }
-
