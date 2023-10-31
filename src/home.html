@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hakuna Matata Bank</title>
+    <link rel="stylesheet" href="style_HomePage.css">
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="inline-block float-left logo">
+            <a class="home" href="#home">
+                <img src="img/logo.svg" alt="Home"></a>
+        </div>
+
+    </div>
+
+    <!--Nav Bar-->
+    <div class="navBar">
+        <div class="navHomePage">
+            <ul>
+                <li class="listNavHome">
+                    <a href="#home">Home</a>
+                </li>
+
+                <li class="navPayment">
+                    <a href="#payment">Payment</a>
+                </li>
+
+                <li class="navContact">
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <li class="navSignout">
+                    <a href="#signout">Signout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!--Welcome Message-->
+    <div class="welcome">
+        <div class="welcomeMsg">
+            <p>Welcome to Hakuna Matata Bank</p>
+        </div>
+        <div class="lastLogin">
+            <p id="loginDateTime"></p>
+            <script>
+                const currentDateTime = new Date();
+                document.getElementById("loginDateTime").innerHTML = 'Your last login: ' + currentDateTime.toLocaleString();
+            </script>
+        </div>
+    </div>
+
+    <!--Asset and Transaction Header-->
+    <div class="rowAssetTransHeader">
+        <!--Asset-->
+        <div class="colAssetHeader">
+            <p>Assets (CAD)</p>
+        </div>
+
+        <div class="colEmptyHeader">
+            <p></p>
+        </div>
+
+        <div class="colTransHeader">
+            <p>Last 5 Transactions (CAD)</p>
+        </div>
+    </div>
+
+    <!--Asset and Transaction-->
+    <div class="rowAssetTrans">
+        <div class="colMain">
+            <!--Asset-->
+            <div class="colAsset">
+                <p>Checking <span id="tab2">(Account # 1)</span></p>
+                <p>Savings <span id="tab2">(Account # 2)</span></p>
+                <p>Tax-Free Savings <span id="tab2">(Account # 3)</span></p>
+            </div>
+
+            <div class="colEmpty">
+                <p></p>
+            </div>
+
+            <div class="colTrans">
+                <p>October 28, 2023 ABM Withdrawal $100.00 $3,286.63</p>
+                <p>October 24, 2023 Funds Transfer $1,353.65 $3,386.63</p>
+                <p>October 24, 2023 Transfer Dr. $1,000.00</p>
+                <p>October 23, 2023 Bill Payment Telus $107.01 $5,740.28</p>
+                <p>October 20, 2023 GST CANADA $827.03 $5,847.29</p>
+                <br>
+                <p><a href="#statement" style="text-decoration: none;">view more transactions</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--
+<a id="logo" href="#home" style="width: 75px;">
+    <img src="img/logo.svg" alt="Hakuna Matata Bank">
+</a>
+<br>
+-->
+
+
+<!--
+
+
+        <div class="mainNav">
+        <ul>
+            <li>
+                <a class="active" href="#home">Home</a>
+                <img height="11" width="12" src="img/imageHome.png" alt="Home">
+                <br>
+            </li>
+
+            <li>
+                <a href="#Payment">
+                    <span id="navPayment">Payment
+                        <br>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#SignOut">
+                    <span id="navSignOut">Sign Out
+                        <br>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+
+
+    </div>
+
+
+            <div class="header-right">
+            <ul>
+                <li class="sub-header inline-block contact">
+                    <a class="sub-header-link" href="#contact">Contact</a>
+                </li>
+
+                <li class="sub-header inline-block signout">
+                    <a class="sub-header-link" href="#">SignOut</a>
+                </li>
+            </ul>
+        </div>
+
+    -->
