@@ -143,7 +143,7 @@ div {
     padding: 5px 1%;
     text-align: left;
     line-height: 35px;
-    height: 4000px;
+    height: 2000px;
 }
 
 .rowAssetTransHeader .colAssetHeader,
@@ -185,7 +185,7 @@ div {
 Asset and Transaction
 -------------------*/
 .rowAssetTrans .colMain .colAsset #tab2 {
-    display:inline-block;
+    display: inline-block;
     padding-left: 5em;
     text-indent: 2em;
     text-align: left;
@@ -215,6 +215,12 @@ li {
     padding: 50px 5px 0 5px;
     text-decoration: none;
     float: none;
+}
+
+/*Footer*/
+.footerMain {
+    display: block;
+    position: sticky;
 }
 
 /*----------------------------------------*/
